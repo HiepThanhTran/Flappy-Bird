@@ -25,7 +25,6 @@ public class BirdController : MonoBehaviour
         anim.SetFloat("flyPower", 0);
         anim.SetBool("isDeath", false);
 
-
         if (gameController == null)
         {
             gameController = GameObject.FindGameObjectWithTag("GameController");

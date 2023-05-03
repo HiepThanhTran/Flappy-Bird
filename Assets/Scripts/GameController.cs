@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            if (!isEndGame)
+            if (!isEndGame && Time.timeScale == 0)
             {
                 StartGame();
             }
@@ -53,6 +53,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         pnlStartGame.SetActive(false);
         birdController.SetActive(true);
+        birdController.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, birdController.GetComponent<BirdController>().flyPower));
     }
 
     public void EndGame()
