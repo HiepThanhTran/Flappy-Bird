@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         pnlStartGame.SetActive(false);
         birdController.SetActive(true);
-        birdController.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, birdController.GetComponent<BirdController>().flyPower));
+        //birdController.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, birdController.GetComponent<BirdController>().flyPower));
     }
 
     public void EndGame()
